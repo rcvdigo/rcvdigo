@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Vendas</title>
+  <style>
+    /* Estilo para as opções dos seletores */
+    .seletores {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    /* Estilo para o menu */
+
+    .menu {
+        background-color: #6596E0;
+        color: #fff;
+        overflow: hidden;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 30px;
+    }
+
+    .active {
+        margin-right: 8rem;
+        margin-left: 8rem;
+    }
+
+    .menu a {
+        float: left;
+        display: block;
+        color: #333;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    /* Estilo para os selects */
+    select {
+        margin: 0 10px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+
+    /* Estilo para o body */
+    body {
+      color: #000;
+      font-family: sans-serif;
+      font-weight: 800;
+      width: 100%;
+      height: 100%; /* Define a altura do elemento para ocupar toda a altura da janela */
+      background: linear-gradient(to bottom right, #03443ba8, #ffffff); /* Define o degradê */
+    }
+
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="menu">
+    <a class="active" href="#home">Menu</a>
+    <a class="active" href="#user">Usuário</a>
+    <a class="active dois" href="#sales-report">Relatório de Venda</a>
+  </div>  
+  <div class="seletores">
+    Categoria:
+    <select id="categoria">
+      <option value="">Selecione a Categoria</option>
+      <option value="comida">Comida</option>
+      <option value="roupa">Roupa</option>
+      <option value="eletronico">Eletrônico</option>
+    </select>
+    Produto:
+    <select id="produto">
+      <option value="">Selecione o Produto</option>
+    </select>
+    Marca:
+    <select id="marca">
+      <option value="">Selecione a Marca</option>
+    </select>
+  </div>
+
+  <canvas id="vendasChart"></canvas>
+
+  <script>
+    const produtos = {
+      comida: {
+        cereais: ["Cereal1", "Cereal2", "Cereal3"],
+        enlatados: ["Enlatado1", "Enlatado2", "Enlatado3"],
+        congelados: ["Congelado1", "Congelado2", "Congelado3"]
+      },
+      roupa: {
+        esportiva: ["Esportiva1", "Esportiva2", "Esportiva3"],
+        dormir: ["Dormir1", "Dormir2", "Dormir3"],
+        terno: ["Terno1", "Terno2", "Terno3"]
+      },
+      eletronico: {
+        smartphone: ["Smartphone1", "Smartphone2", "Smartphone3"],
+        desktop: ["Desktop1", "Desktop2", "Desktop3"],
+        notebook: ["Notebook1", "Notebook2", "Notebook3"]
+      }
+    };
+
+    const vendas = {
+        Cereal1: [50, 60, 45, 55],
+        Cereal2: [40, 45, 50, 48],
+        Cereal3: [55, 52, 58, 50],
+        Enlatado1: [30, 28, 32, 35],
+        Enlatado2: [22, 25, 26, 30],
+        Enlatado3: [18, 20, 22, 25],
+        Congelado1: [12, 15, 18, 20],
+        Congelado2: [10, 12, 14, 16],
+        Congelado3: [8, 9, 10, 11],
+        Esportiva1: [50, 60, 45, 55],
+        Esportiva2: [40, 45, 50, 48],
+        Esportiva3: [55, 52, 58, 50],
+        Dormir1: [30, 28, 32, 35],
+        Dormir2: [22, 25, 26, 30],
+        Dormir3: [18, 20, 22, 25],
+        Terno1: [12, 15, 18, 20],
+        Terno2: [10, 12, 14, 16],
+        Terno3: [8, 9, 10, 11],
+        Smartphone1: [50, 60, 45, 55],
+        Smartphone2: [40, 45, 50, 48],
+        Smartphone3: [55, 52, 58, 50],
+        Desktop1: [30, 28, 32, 35],
+        Desktop2: [22, 25, 26, 30],
+        Desktop3: [18, 20, 22, 25],
+        Notebook1: [12, 15, 18, 20],
+        Notebook2: [10, 12, 14, 16],
+        Notebook3: [8, 9, 10, 11],
+    };
+
+    const categoriaSelect = document.getElementById("categoria");
+    const produtoSelect = document.getElementById("produto");
+    const marcaSelect = document.getElementById("marca");
+
+    const ctx = document.getElementById("vendasChart").getContext("2d");
+
+    let vendasChart = new Chart(ctx, {
+      type: "bar",
+      data: {},
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+            title: {
+              display: true,
+              text: "Vendas",
+            },
+          },
+        },
+        x: {
+          title: {
+            display: true,
+            text: "Mês",
+          },
+        },
+      },
+    });
+
+    categoriaSelect.addEventListener("change", () => {
+        const categoriaSelecionada = categoriaSelect.value;
+        popularProdutos(categoriaSelecionada);
+        popularMarcas(produtoSelect.value);
+        atualizarGrafico(categoriaSelecionada, produtoSelect.value, marcaSelect.value);
+    });
+
+
+    produtoSelect.addEventListener("change", () => {
+      const produtoSelecionado = produtoSelect.value;
+      popularMarcas(produtoSelecionado);
+      atualizarGrafico(categoriaSelect.value, produtoSelecionado);
+    });
+
+    marcaSelect.addEventListener("change", () => {
+      const categoriaSelecionada = categoriaSelect.value;
+      const produtoSelecionado = produtoSelect.value;
+      const marcaSelecionada = marcaSelect.value;
+      atualizarGrafico(categoriaSelecionada, produtoSelecionado, marcaSelecionada);
+    });
+
+
+    function popularProdutos(categoria) {
+        produtoSelect.innerHTML = "<option value=''>Selecione o Produto</option>";
+        marcaSelect.innerHTML = "<option value=''>Selecione a Marca</option>";
+
+        if (categoria !== "") {
+            const produtosCategoria = produtos[categoria];
+            Object.keys(produtosCategoria).forEach((produto) => {
+            const option = document.createElement("option");
+            option.value = produto;
+            option.textContent = produto.charAt(0).toUpperCase() + produto.slice(1);
+            produtoSelect.appendChild(option);
+            });
+
+            // Selecionar automaticamente o primeiro produto
+            produtoSelect.value = Object.keys(produtosCategoria)[0];
+
+            // Atualizar as marcas com base no primeiro produto
+            popularMarcas(produtoSelect.value);
+        }
+    }
+
+
+    function popularMarcas(produto) {
+        marcaSelect.innerHTML = "<option value=''>Selecione a Marca</option>";
+
+        if (produto !== "") {
+            const marcasProduto = produtos[categoriaSelect.value][produto];
+            marcasProduto.forEach((marca) => {
+            const option = document.createElement("option");
+            option.value = marca;
+            option.textContent = marca;
+            marcaSelect.appendChild(option);
+            });
+        }
+    }
+
+
+    function atualizarGrafico(categoria, produto, marca) {
+      const produtosSelecionados = [marca];
+
+      const datasets = produtosSelecionados.map((marca) => {
+        return {
+          label: marca,
+          data: vendas[marca],
+          backgroundColor: getRandomColor(),
+        };
+      });
+
+      vendasChart.data = {
+        labels: ["Janeiro", "Fevereiro", "Março", "Abril"],
+        datasets: datasets,
+      };
+
+      vendasChart.update();
+    }
+
+    function getRandomColor() {
+      const letters = "0123456789ABCDEF";
+      let color = "#";
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    // Inicialização do gráfico vazio
+    atualizarGrafico("", "", "");
+  </script>
+</body>
+</html>
