@@ -11,7 +11,7 @@
 <ul>
 <li><a href="https://crud-py-rcv.onrender.com" target="_blank">Projeto-Crud-Em-Python</a></li>
 <li><a href="http://rcvdigo.infinityfreeapp.com" target="_blank">Projeto-Crud-Em-PHP</a></li>
-<li><a href="[www.rcvdigo.infinityfreeapp.com/index.php](http://rcvdigo.hyperphp.com/)" target="_blank">Projeto-E-Commerce</a></li>
+<li><a href="http://rcvdigo.hyperphp.com" target="_blank">Projeto-E-Commerce</a></li>
 </ul>
 
 <h3 align="left">Connect with me:</h3>
