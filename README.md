@@ -3,7 +3,7 @@
 
 - 🌱 Atualmente estou aprendendo **Angular, TypeScript**
 
-- 👨‍💻 Todos meus projetos você encontra aqui [https://github.com/rcvdigo/projetos](https://github.com/rcvdigo/projetos)
+- 👨‍💻 Todos meus projetos você encontra aqui: [Projetos](https://github.com/rcvdigo)
 
 - 📫 Você me acha através do e-mail **rcvdigo@gmail.com**
 
@@ -16,8 +16,8 @@
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
-<a href="https://dev.to/rcvdigo" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/devto.svg" alt="rcvdigo" height="30" width="40" /></a>
-<a href="https://linkedin.com/in/https://www.linkedin.com/in/rodrigo-camur%c3%a7a-vera-53a950215/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/rodrigo-camur%c3%a7a-vera-53a950215/" height="30" width="40" /></a>
+
+<a href="https://www.linkedin.com/in/rodrigo-camur%c3%a7a-vera-53a950215" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/rodrigo-camur%c3%a7a-vera-53a950215/" height="30" width="40" /></a>
 </p>
 
 <h3 align="left">Languages and Tools:</h3>
