@@ -1,3 +1,11 @@
+<img width=100% src="https://capsule-render.vercel.app/api?type=Wave&color=2BF7EE&height=180&section=header&text=&fontSize=30&fontColor=fff&animation=twinkling&fontAlignY=35"/>&nbsp; <!-- Onda do topo -->
+  
+<div align="center">
+  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Exo+2&size=21&pause=1000&color=2BF7EE&center=true&width=435&lines=Hello%2C+my+name+is+Rodrigo+Camurça+Vera!+%F0%9F%98%8A;I'm+29+years+old+%F0%9F%8E%82;I+live+in+Carapicuíba%2C+SP+%F0%9F%8F%A0;Welcome+to+my+Repository!+%F0%9F%91%BE" alt="Typing SVG" /></a>
+</div> <!-- Apresentação -->
+
+<br/>
+
 <h1 align="center">Oi 👋, Eu sou Rodrigo Camurça Vera</h1>
 <h3 align="center">Eu sou apaixonado em programar.</h3>
 
