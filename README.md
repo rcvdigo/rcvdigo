@@ -6,6 +6,60 @@
 
 <br/>
 
+
+<h2 align="center"> 👨‍💻 Who am i</h2>
+
+<p align="center">
+  <samp>Early career programmer, having studied Computer Science in college Estácio de Sá of Carapicuíba. I have several skills and I improve more and more with each passing day.
+Always willing to face challenges and learn!<br>
+Currently working within support analyst PL/SQL at Global Hitss.
+  </samp>
+  <br> <br>
+    <img src="https://komarev.com/ghpvc/?username=rcvdigo" alt="https://github.com/rcvdigo" />
+</p>
+</div> <!-- Who i am -->
+
+
+<hr>
+
+<div align="center">
+  <a href="https://github.com/rcvdigo">
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=rcvdigo&show_icons=true&theme=dark&include_all_commits=true&count_private=true)"/>
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=rcvdigo&layout=compact&theme=dark"/>
+</div>
+
+
+<h2 align="center"> 🔭 Languages and more</h2>
+<div style="display: inline_block"; align="center">
+  <img align="center" alt="rcvdigo-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+  <img align="center" alt="rcvdigo-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
+  <img align="center" alt="rcvdigo-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
+  <img align="center" alt="rcvdigo-Python" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
+  <img align="center" alt="rcvdigo-Csharp" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg">
+  <img align="center" alt="rcvdigo-Bootstrap" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg">
+  <img align="center" alt="rcvdigo-Git" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg">
+  <img align="center" alt="rcvdigo-GitHub" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg">
+  <img align="center" alt="rcvdigo-Mysql" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg">
+  <img align="center" alt="rcvdigo-Java" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg">
+  <img align="center" alt="rcvdigo-Spring" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg">
+</div>
+
+
+
+<h2 align="center"> 🛠 My work tools </h2>
+<div style="display: inline_block"; align="center">
+  <img align="center" alt="rcvdigo-vscode" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg">
+  <img align="center" alt="rcvdigo-intellij" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/intellij/intellij-original.svg">
+  
+  <img align="center" alt="rcvdigo-jupyter" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/jupyter/jupyter-plain.svg">
+  
+  <img align="center" alt="rcvdigo-figma" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg">
+  <img align="center" alt="rcvdigo-trello" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/trello/trello-plain.svg">
+  <img align="center" alt="rcvdigo-npm" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/npm/npm-original-wordmark.svg">
+</div>
+
+
+
 <h1 align="center">Oi 👋, Eu sou Rodrigo Camurça Vera</h1>
 <h3 align="center">Eu sou apaixonado em programar.</h3>
 
