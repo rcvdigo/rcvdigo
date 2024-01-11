@@ -28,6 +28,14 @@ Currently working within support analyst PL/SQL at Global Hitss.
   <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=rcvdigo&layout=compact&theme=dark"/>
 </div>
 
+<div align="center">
+  <p>
+    <a href="#Retrospectiva2023" style="color: blue;">#Retrospectiva2023</a>
+    <a href="#MinhasConquistas" style="color: green;">#MinhasConquistas</a>
+    <a href="#Dio" style="color: red;">#Dio</a>
+    <img src="https://www.dio.me/_next/image?url=https%3A%2F%2Fimgenerator.digitalinnovation.one%2Fretrospectives%2F217e23d6-0a87-4d81-8b91-eef1601b6d8b%2F2023&w=1200&q=75">
+  </p>
+</div>
 
 <h2 align="center"> 🔭 Languages and more</h2>
 <div style="display: inline_block"; align="center">
